@@ -194,6 +194,11 @@ open class CountryPickerController: UIViewController {
         controller.presentingVC?.present(navigationController, animated: true, completion: nil)
         return controller
     }
+
+    open func selectCountry(_ country: Country) {
+        self.callBack?(country)
+        CountryManager.shared.lastCountrySelected = country
+    }
     
     // MARK: - Cross Button Action
     @objc func crossButtonClicked(_ sender: UIBarButtonItem) {
