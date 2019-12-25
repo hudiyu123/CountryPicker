@@ -189,6 +189,7 @@ open class CountryPickerController: UIViewController {
         let controller = CountryPickerController()
         controller.presentingVC = viewController
         controller.callBack = callBack
+        controller.modalPresentationStyle = .fullScreen
         let navigationController = UINavigationController(rootViewController: controller)
         controller.presentingVC?.present(navigationController, animated: true, completion: nil)
         return controller
