@@ -195,7 +195,7 @@ open class CountryPickerController: UIViewController {
         return controller
     }
 
-    open func selectCountry(_ country: Country) {
+    open func selectCountry(_ country: Country?) {
         CountryManager.shared.lastCountrySelected = country
     }
     
